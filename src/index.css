@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+.logo{
+    width: 100px;
+    height: 55px;
+    border-radius: 50px;
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
