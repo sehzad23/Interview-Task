@@ -45,17 +45,9 @@ const ItemCard = ({ menuData, setSelectedCategory, addToCart }) => {
                 className="bg-white shadow-md mb-2 p-2 rounded-lg flex items-center justify-between "
               >
                 <div className="flex items-center gap-2">
-                  {item.ItemImage ? (
-                    <img
-                      src={`https://www.foodchow.com/FoodItemImages/${item.ItemImage}`}
-                      alt={item.ItemName}
-                      className="w-30 h-30 object-cover rounded"
-                    />
-                  ) : (
-                    <div className="w-16 h-16 bg-gray-200 rounded"></div>
-                  )}
+                 
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-800">
+                    <h3 className=" font-semibold text-gray-800 text-xl">
                       {item.ItemName}
                     </h3>
                     <p className="text-green-700 text-sm">Rs.{item.Price}</p>
@@ -68,10 +60,10 @@ const ItemCard = ({ menuData, setSelectedCategory, addToCart }) => {
                 </div>
                 <button
                   onClick={() => addToCart(item)}
-                  className={`text-xs font-semibold px-2 py-1 rounded-full ${
+                  className={`text-xs font-semibold px-4 py-2 rounded-full ${
                     item.Stock === 0
                       ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                      : "bg-green-700 text-white hover:bg-green-800"
+                      : "border-2 border-green-800 text-green-800 duration-300 hover:text-white hover:bg-green-800"
                   }`}
                   disabled={item.Stock === 0}
                 >

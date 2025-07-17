@@ -130,14 +130,14 @@ const Home = () => {
       {/* Main Content */}
       <div className="bg-gray-100 p-2 sm:p-4 flex flex-col lg:flex-row gap-2 sm:gap-4">
         {/* Sidebar Box1 */}
-        <div className=".no-scrollbar overflow-y-hidden bg-white w-full lg:w-[22%] h-auto max-h-[70vh] rounded-lg border border-gray-300 p-2 ">
+        <div className=".no-scrollbar  bg-white w-full lg:w-[22%] h-auto max-h-[70vh] rounded-lg border border-gray-300 p-2 ">
           <h1 className="font-bold text-lg text-green-700 mb-2">CATEGORIES</h1>
           <Category categories={categoryList} selectedCategory={selectedCategory} onSelectCategory={handleCategoryClick} />
         </div>
 
         {/* Items Box2 */}
             {/* Search Bar */}
-      <div className="p-5 sm:p-4 bg-white w-[55%] overflow-auto ">
+      <div className="p-5 sm:p-4 bg-white w-[55%] overflow-auto  ">
         <div className="relative max-w-md   p-5 ">
           <input
             type="text"
@@ -148,13 +148,13 @@ const Home = () => {
             aria-label="Search menu items"
           />
         </div>
-        <div className="bg-white w-full lg:w-[100%] h-auto max-h-[70vh] rounded-lg border border-gray-300 p-2 overflow-y-auto" ref={itemsContainerRef}>
+        <div className="bg-white w-full lg:w-[100%] h-auto max-h-[70vh] rounded-lg border border-gray-300 p-2 overflow-y-auto no-scrollbar" ref={itemsContainerRef}>
           <ItemCard menuData={filteredMenuData} setSelectedCategory={setSelectedCategory} addToCart={addToCart} />
         </div>
       </div>
 
         {/* Cart Box3 */}
-        <div className="bg-white w-full lg:w-[22%] h-auto max-h-[70vh] rounded-lg border border-gray-300 p-2 overflow-y-auto">
+        <div className="bg-white w-full no-scrollbar lg:w-[22%] h-auto max-h-[70vh] rounded-lg border border-gray-300 p-2 overflow-y-auto">
           
           <h2 className="font-bold text-lg text-green-700 mb-2">Your Cart</h2>
           {cartItems.length === 0 ? (
