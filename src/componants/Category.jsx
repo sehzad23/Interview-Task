@@ -1,12 +1,14 @@
 const Category = ({ categories, selectedCategory, onSelectCategory }) => {
   return (
-    <ul className="no-scrollbar py-5 overflow-y-auto max-h-[calc(100%-2.5rem)] w-full">
+    <ul className="py-2 overflow-auto max-h-[calc(100%-2rem)] .no-scrollbar">
       {categories.map((cat, index) => (
         <li
           key={index}
           onClick={() => onSelectCategory(cat)}
-          className={`block text-green-900 text-xl mt-5 hover:bg-green-700 hover:text-white p-3 w-full duration-300 pl-5 cursor-pointer ${
-            selectedCategory === cat ? "bg-green-700 text-white font-bold" : ""
+          className={` .no-scrollbar  text-xl py-1 px-2 cursor-pointer ${
+            selectedCategory === cat
+              ? "bg-green-700 text-white font-semibold"
+              : "text-green-800 hover:bg-green-100"
           }`}
         >
           {cat}
@@ -15,4 +17,5 @@ const Category = ({ categories, selectedCategory, onSelectCategory }) => {
     </ul>
   );
 };
+
 export default Category;
